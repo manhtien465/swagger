@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "swagger": "swagger-jsdoc -d swagger/config.js -o swagger/swagger.json services/*.service.js && node ./swagger/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "swagger-jsdoc": "^6.1.0"
+  },
+  "devDependencies": {
+    "swagger-ui-express": "^4.1.6"
+  }
+}
