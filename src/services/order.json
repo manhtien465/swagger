@@ -1,0 +1,42 @@
+{
+		
+		"/order":{
+		  "get": {
+			"tags": [
+			  "order"
+			],
+			"security":{
+				"Bear":[]
+			},
+       
+			"summary": "get order",
+			"description": "",
+			"operationId": "placeOrder",
+			"consumes": [
+			  "application/json"
+			],
+			"produces": [
+			  "application/json",
+			  "application/xml"
+			],
+			
+			"responses": {
+			  "200": {
+				"description": "successful operation",
+				"schema": {
+				  "$ref": "#/definitions/Order"
+				}
+			  },
+			  "400": {
+				"description": "Invalid Order"
+			  }
+			}
+		  }
+		}
+}
+		
+		
+
+
+	 
+	

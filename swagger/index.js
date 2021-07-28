@@ -3,7 +3,9 @@ const swaggerUi = require('swagger-ui-express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const swaggerFile = require('./all.json');
+const index = require('../src/services/index.js');
+const user = require('../src/services/user.json');
+const order = require('../src/services/order.json');
 const app = express();
 
 app.use(function (req, res, next) {
@@ -24,8 +26,9 @@ const options = {
 	enableCORS: true
 };
 
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerFile, options));
-
+app.use('/', swaggerUi.serve, swaggerUi.setup(index, options));
+// app.use('/user',swaggerUi.serve, swaggerUi.setup(user, options))
+// app.use('/order',swaggerUi.serve, swaggerUi.setup(order, options))
 app.listen(PORT, () =>
 	console.log(`swagger ui listening on port ${PORT}!`),
 );

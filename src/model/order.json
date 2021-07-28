@@ -1,0 +1,37 @@
+{
+	"Order": {
+		"type": "object",
+		"properties": {
+		  "id": {
+			"type": "integer",
+			"format": "int64"
+		  },
+		  "username": {
+			"type": "string"
+		  },
+		  "firstName": {
+			"type": "string"
+		  },
+		  "lastName": {
+			"type": "string"
+		  },
+		  "email": {
+			"type": "string"
+		  },
+		  "password": {
+			"type": "string"
+		  },
+		  "phone": {
+			"type": "string"
+		  },
+		  "orderStatus": {
+			"type": "integer",
+			"format": "int32",
+			"description": "Order Status"
+		  }
+		},
+		"xml": {
+		  "name": "Order"
+		}
+	  }
+}
